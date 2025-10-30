@@ -23,23 +23,19 @@ let hoveredStyle = {
 };
 
 
-
 async function main() {
-  // fetch the counties stored in Heart of NY database
-  const DB_COUNTIES = await fetch("http://localhost:3000/api/counties")
-    .then((res) => res.json())
-    .then((data) => data)
-    .catch(error => console.error('Error fetching data:', error));
+  const SERVER_ADDRESS = "http://localhost:3000"
 
-  // fetch the county societies stored in Heart of NY database
-  const DB_SOCIETIES = await fetch("http://localhost:3000/api/societies")
-    .then((res) => res.json())
-    .then((data) => data)
-    .catch(error => console.error('Error fetching data:', error));
-
+  const [DB_COUNTIES, DB_SOCIETIES, COUNTIES_GEOJSON] = await Promise.all([
+    fetch(`${SERVER_ADDRESS}/api/counties`).then(res => res.json()),  // fetch the counties stored in Heart of NY database
+    fetch(`${SERVER_ADDRESS}/api/societies`).then(res => res.json()), // fetch the county societies stored in Heart of NY database
+    fetch("assets/counties_ny.geojson").then(res => res.json())
+  ]);
 
   // filter GeoJSON data to only include counties that are in the database
-  const FILTERED_COUNTIES_GEOJSON = COUNTIES_GEOJSON.features.filter((feature) => DB_COUNTIES.map((county) => county.county_name) .includes(feature.properties.name));
+  const FILTERED_COUNTIES_GEOJSON = COUNTIES_GEOJSON.features.filter(
+    (feature) => DB_COUNTIES.map((county) => county.county_name).includes(feature.properties.name)
+  );
 
   function onEachFeature(feature, layer) {
     let name = L.tooltip({
