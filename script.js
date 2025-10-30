@@ -2,8 +2,8 @@ let map = L.map('map', {
   center: [42.1044, -75.9127],
   zoom: 8,
   minZoom: 8,
-  maxBounds: L.latLngBounds([40.8821, -80.0110], [43.3267, -71.8335]),
-  maxBoundsViscosity: 1
+  maxBounds: L.latLngBounds([40.8821, -79.8127], [43.3267, -72.1127]),
+  maxBoundsViscosity: 0.9
 });
 
 let overlayStyle = {
@@ -100,7 +100,7 @@ async function main() {
   }).addTo(map);
 
   // add marker at TechWorks!
-  // L.marker([42.10442541105549, -75.91265528372267]).addTo(map).bindPopup('TechWorks!').openPopup();
+  L.marker([42.10442541105549, -75.91265528372267]).addTo(map).bindPopup('TechWorks!').openPopup();
 }
 
 
