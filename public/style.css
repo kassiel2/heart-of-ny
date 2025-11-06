@@ -19,7 +19,11 @@
   border-radius: 8px;
 }
 
-#info-container[show=true] {
+#info-container.hidden {
+  display: none;
+}
+
+#info-container {
   display: block;
   position: absolute;
   z-index: 1000 !important;
@@ -29,10 +33,6 @@
   width: 400px;
   background: gray;
   border-radius: 8px;
-}
-
-#info-container[show=false] {
-  display: none;
 }
 
 #info-close {

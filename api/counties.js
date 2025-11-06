@@ -1,13 +1,5 @@
 const express = require("express");
-const cors = require("cors");
 const router = express.Router();
-
-const corsOptions = {
-  origin: [process.env.URL]
-};
-
-router.use(cors(corsOptions));
-
 const pool = require("../db");
 
 router.get("/", async (req, res) => {
