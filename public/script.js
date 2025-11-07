@@ -1,9 +1,13 @@
+let bounds = L.latLngBounds(
+  [40.8821, -79.8127],
+  [43.3267, -72.1127]
+);
+
 let map = L.map('map', {
   center: [42.1044, -75.9127],
-  zoom: 8,
   minZoom: 8,
-  maxBounds: L.latLngBounds([40.8821, -79.8127], [43.3267, -72.1127]),
-  maxBoundsViscosity: 0.9
+  maxBounds: bounds,
+  maxBoundsViscosity: 0.9,
 });
 
 let overlayStyle = {
@@ -29,9 +33,12 @@ async function main() {
   try {
     // add tile layer to map
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
+      maxZoom: 15,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+
+    map.fitBounds(bounds);
+    window.onresize = () => map.fitBounds(bounds);
 
     const [DB_COUNTIES, DB_SOCIETIES, COUNTIES_GEOJSON] = await Promise.all([
       fetch(`${SERVER_ADDRESS}/api/counties`).then(res => res.json()),  // fetch the counties stored in Heart of NY database
