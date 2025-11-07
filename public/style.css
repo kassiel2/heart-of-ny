@@ -9,7 +9,6 @@
 #map-container {
   position: relative;
   max-width: 1400px;
-  padding: 10px;
   gap: 10px;
 }
 
