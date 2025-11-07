@@ -15,9 +15,13 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/api/counties", countiesRoute);
 app.use("/api/societies", societiesRoute);
 
-app.get("*", (_, res) =>
-  res.sendFile(path.join(__dirname, "public", "index.html"))
-);
+app.get("*", (req, res) => {
+  if (!req.path.startsWith("/api/")) {
+    res.redirect("/");
+  } else {
+    res.status(404).json();
+  }
+});
 
 app.listen(process.env.SERVER_PORT, () => {
   console.log(`Server is running on ${process.env.SERVER_ADDRESS}:${process.env.SERVER_PORT}`)
