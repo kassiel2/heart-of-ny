@@ -9,13 +9,14 @@
 #map-container {
   position: relative;
   max-width: 1400px;
-  max-height: 600px;
   padding: 10px;
   gap: 10px;
 }
 
 #map {
-  height: 600px;
+  width: 100%;
+  aspect-ratio: 14 / 6;
+  max-height: 600px;
   border-radius: 8px;
 }
 
