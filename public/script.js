@@ -27,26 +27,26 @@ async function main() {
   const SERVER_ADDRESS = window.location.origin;
 
   try {
+    // add tile layer to map
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
     const [DB_COUNTIES, DB_SOCIETIES, COUNTIES_GEOJSON] = await Promise.all([
       fetch(`${SERVER_ADDRESS}/api/counties`).then(res => res.json()),  // fetch the counties stored in Heart of NY database
       fetch(`${SERVER_ADDRESS}/api/societies`).then(res => res.json()), // fetch the county societies stored in Heart of NY database
       fetch("assets/counties_ny.geojson").then(res => res.json())
     ]);
 
-    // pre-fetch db lookups
-    const countyMap = Object.fromEntries(DB_COUNTIES.map(c => [c.county_name, c]));
-    const societyMap = Object.fromEntries(DB_SOCIETIES.map(s => [s.county_id, s]));
-
     // filter GeoJSON data to only include counties that are in the database
     const FILTERED_COUNTIES_GEOJSON = COUNTIES_GEOJSON.features.filter(
       (feature) => DB_COUNTIES.map((county) => county.county_name).includes(feature.properties.name)
     );
 
-    // add tile layer to map
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+    // pre-fetch db lookups
+    const countyMap = Object.fromEntries(DB_COUNTIES.map(c => [c.county_name, c]));
+    const societyMap = Object.fromEntries(DB_SOCIETIES.map(s => [s.county_id, s]));
 
     const infoPanel = document.getElementById("info-container");
     const closeButton = document.getElementById("info-close");
@@ -105,7 +105,7 @@ async function main() {
     L.marker([42.10442541105549, -75.91265528372267]).addTo(map).bindPopup('TechWorks!').openPopup();
   } catch (err) {
     console.error(err);
-    alert("Failed to load map data. Please try again later.");
+    alert("Failed to load county data. Please try again later.");
   }
 }
 
