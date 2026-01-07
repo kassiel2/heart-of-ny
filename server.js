@@ -3,8 +3,7 @@ const express = require("express");
 const cors = require("cors");
 const path = require("path");
 
-const countiesRoute = require("./api/counties.js");
-const societiesRoute = require("./api/societies.js");
+const routes = require('./api/routes.js');
 
 const app = express();
 
@@ -12,8 +11,7 @@ app.use(cors({ origin: process.env.URL }));
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use("/api/counties", countiesRoute);
-app.use("/api/societies", societiesRoute);
+app.use('/api', routes);
 
 app.get("*", (req, res) => {
   if (!req.path.startsWith("/api/")) {

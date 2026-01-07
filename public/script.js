@@ -28,7 +28,7 @@ let hoveredStyle = {
 
 
 async function main() {
-  const SERVER_ADDRESS = window.location.origin;
+  const SERVER_ADDRESS = 'http://localhost:3000';
 
   try {
     // add tile layer to map
@@ -41,11 +41,12 @@ async function main() {
     window.onresize = () => map.fitBounds(bounds);
 
     const [DB_COUNTIES, DB_SOCIETIES, COUNTIES_GEOJSON] = await Promise.all([
-      fetch(`${SERVER_ADDRESS}/api/counties`).then(res => res.json()),  // fetch the counties stored in Heart of NY database
-      fetch(`${SERVER_ADDRESS}/api/societies`).then(res => res.json()), // fetch the county societies stored in Heart of NY database
+      fetch(`${SERVER_ADDRESS}/api/all_counties`).then(res => res.json()),  // fetch the counties stored in Heart of NY database
+      fetch(`${SERVER_ADDRESS}/api/all_societies`).then(res => res.json()), // fetch the county societies stored in Heart of NY database
       fetch("assets/counties_ny.geojson").then(res => res.json())
     ]);
 
+    console.log(DB_COUNTIES)
     // filter GeoJSON data to only include counties that are in the database
     const FILTERED_COUNTIES_GEOJSON = COUNTIES_GEOJSON.features.filter(
       (feature) => DB_COUNTIES.map((county) => county.county_name).includes(feature.properties.name)
