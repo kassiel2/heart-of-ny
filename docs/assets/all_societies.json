@@ -1,0 +1,272 @@
+[
+{
+"society_id": 8,
+"society_name": "Cortland County Historical Society",
+"county_id": 12,
+"website": "https://cortlandhistory.org/",
+"location": "25 Homer Ave, New York, NY 13045",
+"email": null,
+"phone": null
+},
+{
+"society_id": 9,
+"society_name": "Delaware Historical Society ",
+"county_id": 13,
+"website": "https://dehistory.org/",
+"location": "505 N. Market Street, Wilmington, NY 19801",
+"email": null,
+"phone": null
+},
+{
+"society_id": 10,
+"society_name": "Buffalo History and Historical Museum",
+"county_id": 15,
+"website": "https://buffaloah.com/a/notting/25/hp/hp.html",
+"location": "1 Museum Court, Buffalo, NY 14201",
+"email": null,
+"phone": null
+},
+{
+"society_id": 1,
+"society_name": "Allegany County Historical Society",
+"county_id": 1,
+"website": "https://www.alleganyhistory.org/index.php",
+"location": "11 East Greenwood Street, Andover, NY 14806",
+"email": null,
+"phone": null
+},
+{
+"society_id": 2,
+"society_name": "Broome County Historical Society",
+"county_id": 4,
+"website": "https://www.broomehistory.org/",
+"location": "185 Court Street, Binghamton, NY 13901",
+"email": null,
+"phone": null
+},
+{
+"society_id": 3,
+"society_name": "Cattaraugus Area Historical Society Museum",
+"county_id": 5,
+"website": "https://enchantedmountains.com/place/cattaraugus-area-historical-society-museum",
+"location": "23 Main Street, Cattaraugus, NY 14719",
+"email": null,
+"phone": null
+},
+{
+"society_id": 4,
+"society_name": "Cayuga County Historical Society",
+"county_id": 6,
+"website": "https://www.cayugacounty.us/1059/Historical-Society",
+"location": "1294 State Route 104A, Sterling, NY 13156",
+"email": null,
+"phone": null
+},
+{
+"society_id": 5,
+"society_name": "The Chautauqua County Historical Society",
+"county_id": 7,
+"website": "https://www.cchsmcclurg.org/",
+"location": "20 E. Main Street, Westfield, NY 14787",
+"email": null,
+"phone": null
+},
+{
+"society_id": 6,
+"society_name": "Chemung County Historical Society",
+"county_id": 8,
+"website": "https://chemungvalleymuseum.org/",
+"location": "415 E. Water Street, Elmira, NY 14901",
+"email": null,
+"phone": null
+},
+{
+"society_id": 12,
+"society_name": "Herkimer County Historical Society",
+"county_id": 21,
+"website": "https://herkimercountyhistory.org/",
+"location": "400-406 North Main Street, Herkimer, NY 13350",
+"email": null,
+"phone": null
+},
+{
+"society_id": 13,
+"society_name": "Livingston County Historical Society Museum",
+"county_id": 25,
+"website": "https://www.livingstoncountyhistoricalsociety.com/",
+"location": "30 Center Street, Geneseo, NY 14454",
+"email": null,
+"phone": null
+},
+{
+"society_id": 16,
+"society_name": "Niagara History Center",
+"county_id": 28,
+"website": "https://niagarahistory.org/",
+"location": "215 Niagara Street, Lockport, NY 14094",
+"email": null,
+"phone": null
+},
+{
+"society_id": 17,
+"society_name": "Onondaga Historical Assocication",
+"county_id": 30,
+"website": "https://www.cnyhistory.org/",
+"location": "321 Montgomery Street, Syracuse, NY 13202",
+"email": null,
+"phone": null
+},
+{
+"society_id": 18,
+"society_name": "Oneida Count History Center",
+"county_id": 29,
+"website": "https://oneidacountyhistory.org/",
+"location": "1608 Genesee Street, Utica, NY 13502",
+"email": null,
+"phone": null
+},
+{
+"society_id": 19,
+"society_name": "Ontario County Historical Society",
+"county_id": 31,
+"website": "https://www.ochs.org/",
+"location": "55 N. Main Street, Canandaigua, NY 14424",
+"email": null,
+"phone": null
+},
+{
+"society_id": 20,
+"society_name": "Orleans County Historical Association",
+"county_id": 33,
+"website": "https://orleanshistory.org/",
+"location": "406 West Avenue, Medina, NY 14103",
+"email": null,
+"phone": null
+},
+{
+"society_id": 22,
+"society_name": "Schuyler County Historical Society",
+"county_id": 42,
+"website": "https://schuylerhistory.org/",
+"location": "108 N. Catharine Street, Montour Falls, NY 14865",
+"email": null,
+"phone": null
+},
+{
+"society_id": 23,
+"society_name": "Seneca Falls Historial Society",
+"county_id": 43,
+"website": "https://nyheritage.org/organizations/seneca-falls-historical-society",
+"location": "55 Cayuga Street, Seneca Falls, NY 13148",
+"email": null,
+"phone": null
+},
+{
+"society_id": 25,
+"society_name": "Tioga County Historical Society",
+"county_id": 48,
+"website": "https://tiogahistory.org/",
+"location": "110 Front Street, Owego, NY 13827",
+"email": null,
+"phone": null
+},
+{
+"society_id": 26,
+"society_name": "The History Center in Tompkins County",
+"county_id": 49,
+"website": "https://thehistorycenter.net/",
+"location": "110 North Tioga Street, Ithaca, NY 14850",
+"email": null,
+"phone": null
+},
+{
+"society_id": 27,
+"society_name": "Wayne County Historical Society",
+"county_id": 53,
+"website": "https://www.waynehistory.org/",
+"location": "21 Butternut Street, Lyons, NY 14489",
+"email": null,
+"phone": null
+},
+{
+"society_id": 28,
+"society_name": "Wymoning County New York",
+"county_id": 55,
+"website": "https://www.wyomingco.net/",
+"location": "143 Main Street, Warsaw, NY 14569",
+"email": null,
+"phone": null
+},
+{
+"society_id": 14,
+"society_name": "The Madison Historical Society",
+"county_id": 57,
+"website": "https://www.madisonhistory.org/",
+"location": "14 Meetinghouse Lane, Madison, NY O6443",
+"email": null,
+"phone": null
+},
+{
+"society_id": 15,
+"society_name": "Monroe Historial Society",
+"county_id": 58,
+"website": "https://www.monroehistoryny.org/",
+"location": "1465 Orange Turnpike, Monroe, NY 10950",
+"email": null,
+"phone": null
+},
+{
+"society_id": 29,
+"society_name": "Yates County History Center",
+"county_id": 56,
+"website": "http://www.yatespast.org/",
+"location": "107 Chepel Street, Penn Yan, NY 14527",
+"email": null,
+"phone": null
+},
+{
+"society_id": 11,
+"society_name": "Genesee County Historians",
+"county_id": 18,
+"website": "https://www.geneseeny.gov/Home",
+"location": "3837 West Main Street Road, Batavia, NY 14020",
+"email": null,
+"phone": null
+},
+{
+"society_id": 24,
+"society_name": "The Steuben County Historical Society",
+"county_id": 45,
+"website": "https://www.schsny.org/",
+"location": "PO Box 349, Bath, NY 14810",
+"email": null,
+"phone": null
+},
+{
+"society_id": 7,
+"society_name": "Chenango County Historical Society",
+"county_id": 9,
+"website": "https://chenangohistorical.org/",
+"location": "45 Rexfod Street, Norwich, NY 13815",
+"email": null,
+"phone": null
+},
+{
+"society_id": 21,
+"society_name": "Otsego County Historical Society",
+"county_id": 35,
+"website": "https://mohawkvalleymuseums.us/browse-all/otsego-county/",
+"location": "320 W. Main St., Gaylord, NY 49734",
+"email": null,
+"phone": null
+},
+{
+"society_id": 30,
+"society_name": "Broome test Society",
+"county_id": 4,
+"website": "https://www.testbroom.org",
+"location": "123 test st, Vestal, NY 13850",
+"email": null,
+"phone": null
+}
+]
