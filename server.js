@@ -20,6 +20,10 @@ app.use(cors({ origin: process.env.URL }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/api', routes);
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://heartofny.net'); // or '*'
+  next();
+});
 
 app.get("*", (req, res) => {
   if (!req.path.startsWith("/api/")) {
@@ -38,4 +42,4 @@ var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
 
 httpServer.listen(8080);
-httpsServer.listen(443);
+httpsServer.listen(8443);
