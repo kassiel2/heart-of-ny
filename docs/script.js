@@ -28,7 +28,7 @@ let hoveredStyle = {
 
 
 async function main() {
-  const SERVER_ADDRESS = 'http://129.158.201.205:8080';
+  //const SERVER_ADDRESS = 'http://129.158.201.205:8080';
 
   try {
     // add tile layer to map
@@ -41,8 +41,8 @@ async function main() {
     window.onresize = () => map.fitBounds(bounds);
 
     const [DB_COUNTIES, DB_SOCIETIES, COUNTIES_GEOJSON] = await Promise.all([
-      fetch(`assets/all_counties`).then(res => res.json()),  // fetch the counties stored in Heart of NY database
-      fetch(`assets/all_societies`).then(res => res.json()), // fetch the county societies stored in Heart of NY database
+      fetch(`assets/all_counties.json`).then(res => res.json()),  // fetch the counties stored in Heart of NY database
+      fetch(`assets/all_societies.json`).then(res => res.json()), // fetch the county societies stored in Heart of NY database
       fetch("assets/counties_ny.geojson").then(res => res.json())
     ]);
 
