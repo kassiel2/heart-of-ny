@@ -26,7 +26,7 @@ function reducer(accumulator, row) {
   console.log('row:', row);
   if (accumulator.county_name == null) {
     accumulator.county_name = row.county_name;
-    accumulator.societes = [];
+    accumulator.societies = [];
   }
   const society = {
     email: row.email,
@@ -35,7 +35,7 @@ function reducer(accumulator, row) {
     phone: row.phone,
     website: row.website,
   };
-  accumulator.societes.push(society);
+  accumulator.societies.push(society);
   console.log('accumulator:', accumulator);
   return accumulator;
 }

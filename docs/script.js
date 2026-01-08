@@ -28,7 +28,7 @@ let hoveredStyle = {
 
 
 async function main() {
-  const SERVER_ADDRESS = 'http://localhost:3000';
+  const SERVER_ADDRESS = 'http://129.158.201.205:8080';
 
   try {
     // add tile layer to map
