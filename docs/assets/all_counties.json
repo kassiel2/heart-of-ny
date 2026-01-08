@@ -1,0 +1,230 @@
+[
+{
+"county_id": 1,
+"county_name": "Allegany"
+},
+{
+"county_id": 2,
+"county_name": "Albany"
+},
+{
+"county_id": 3,
+"county_name": "Bronx"
+},
+{
+"county_id": 5,
+"county_name": "Cattaraugus"
+},
+{
+"county_id": 6,
+"county_name": "Cayuga"
+},
+{
+"county_id": 7,
+"county_name": "Chautauqua"
+},
+{
+"county_id": 8,
+"county_name": "Chemung"
+},
+{
+"county_id": 9,
+"county_name": "Chenango"
+},
+{
+"county_id": 10,
+"county_name": "Clinton"
+},
+{
+"county_id": 11,
+"county_name": "Columbia"
+},
+{
+"county_id": 12,
+"county_name": "Cortland"
+},
+{
+"county_id": 13,
+"county_name": "Delaware"
+},
+{
+"county_id": 14,
+"county_name": "Dutchess"
+},
+{
+"county_id": 15,
+"county_name": "Erie"
+},
+{
+"county_id": 16,
+"county_name": "Essex"
+},
+{
+"county_id": 17,
+"county_name": "Franklin"
+},
+{
+"county_id": 18,
+"county_name": "Genesee"
+},
+{
+"county_id": 19,
+"county_name": "Greene"
+},
+{
+"county_id": 20,
+"county_name": "Hamilton"
+},
+{
+"county_id": 21,
+"county_name": "Herkimer"
+},
+{
+"county_id": 22,
+"county_name": "Jefferson"
+},
+{
+"county_id": 23,
+"county_name": "Kings"
+},
+{
+"county_id": 25,
+"county_name": "Livingston"
+},
+{
+"county_id": 27,
+"county_name": "Nassau"
+},
+{
+"county_id": 28,
+"county_name": "Niagara"
+},
+{
+"county_id": 29,
+"county_name": "Oneida"
+},
+{
+"county_id": 30,
+"county_name": "Onondaga"
+},
+{
+"county_id": 31,
+"county_name": "Ontario"
+},
+{
+"county_id": 32,
+"county_name": "Orange"
+},
+{
+"county_id": 33,
+"county_name": "Orleans"
+},
+{
+"county_id": 34,
+"county_name": "Oswego"
+},
+{
+"county_id": 35,
+"county_name": "Otsego"
+},
+{
+"county_id": 36,
+"county_name": "Queens"
+},
+{
+"county_id": 37,
+"county_name": "Rensselaer"
+},
+{
+"county_id": 38,
+"county_name": "Rockland"
+},
+{
+"county_id": 40,
+"county_name": "Saratoga"
+},
+{
+"county_id": 41,
+"county_name": "Schenectady"
+},
+{
+"county_id": 42,
+"county_name": "Schuyler"
+},
+{
+"county_id": 43,
+"county_name": "Seneca"
+},
+{
+"county_id": 44,
+"county_name": "Staten Island"
+},
+{
+"county_id": 45,
+"county_name": "Steuben"
+},
+{
+"county_id": 46,
+"county_name": "Suffolk"
+},
+{
+"county_id": 47,
+"county_name": "Sullivan"
+},
+{
+"county_id": 48,
+"county_name": "Tioga"
+},
+{
+"county_id": 49,
+"county_name": "Tompkins"
+},
+{
+"county_id": 50,
+"county_name": "Ulster"
+},
+{
+"county_id": 51,
+"county_name": "Warren"
+},
+{
+"county_id": 52,
+"county_name": "Washington"
+},
+{
+"county_id": 53,
+"county_name": "Wayne"
+},
+{
+"county_id": 54,
+"county_name": "Westchester"
+},
+{
+"county_id": 55,
+"county_name": "Wyoming"
+},
+{
+"county_id": 56,
+"county_name": "Yates"
+},
+{
+"county_id": 57,
+"county_name": "Madison"
+},
+{
+"county_id": 58,
+"county_name": "Monroe"
+},
+{
+"county_id": 4,
+"county_name": "Broome"
+},
+{
+"county_id": 39,
+"county_name": "St. Lawrence"
+},
+{
+"county_id": 24,
+"county_name": "Lewis"
+}
+]
