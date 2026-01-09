@@ -1,0 +1,38 @@
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const params = new URLSearchParams(window.location.search);
+    const countyId = params.get('county_id');
+    if (countyId) {
+        const apiUrl = `https://129.158.201.205:8443/api/societies?county_id=${countyId}`;
+        fetch(apiUrl)
+            .then(response => {
+          const data = response.json();
+          console.log(data);
+          return data;})
+            .then(data => {
+                const container = document.getElementById('pageWrapper');
+                if (!data.societies || data.societies.length === 0) {
+                    container.innerHTML = '<p style="color: red; font-size: 16px; font-weight: bold;">No societies found for this county.</p>';
+                    return;
+                }
+                const countyName = data.county_name || 'Unknown County'; // API'nin county adını döndüğünü varsayalım
+                const header = `<h1 style="font-size: 24px; font-weight: bold; margin-bottom: 20px;">${countyName}, NY</h1>`;
+                const societies = data.societies.map(s => {
+                    const website = s.website ? `<a href='${s.website}' style="color: blue; text-decoration: none;">Click</a>` : 'Not available';
+                    return `
+                        <li style="margin-bottom: 10px; list-style-type: none; padding: 5px; border-bottom: 1px solid #ccc;">
+                            <strong>Name:</strong> ${s.name} <br>
+                            <strong>Website:</strong> ${website}<br>
+                            <strong>Address:</strong> ${s.location} 
+                        </li>
+                    `;
+                }).join('');
+                container.innerHTML = `${header}<ul style="padding: 0; margin: 20px 0;">${societies}</ul>`;
+            })
+            .catch(error => {
+                console.error('Failed to fetch societies:', error);
+                document.getElementById('pageWrapper').innerHTML = '<p style="color: red; font-size: 16px; font-weight: bold;">Error loading societies.</p>';
+            });
+    }
+});
+</script>

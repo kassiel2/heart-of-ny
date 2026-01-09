@@ -22,6 +22,7 @@ router.get("/all_counties", async (req, res) => {
   }
 });
 
+
 function reducer(accumulator, row) {
   console.log('row:', row);
   if (accumulator.county_name == null) {
@@ -46,6 +47,7 @@ function transformCounty(data) {
   return county;
 }
 
+
 router.get("/societies", async (req, res) => {
   try {
     const countyId = req.query.county_id;
@@ -63,4 +65,45 @@ router.get("/societies", async (req, res) => {
     res.status(500).send("Server error");
   }
 });
+
+function reducerAll(accumulator, row) {
+  // console.log('row:', row);
+  var county = accumulator[row.county_id];
+  if (county == null) {
+    county = {
+      county_name: row.county_name,
+      societies: [],
+    };
+    accumulator[row.county_id] = county;
+  }
+  const society = {
+    email: row.email,
+    location: row.location,
+    name: row.society_name,
+    phone: row.phone,
+    website: row.website,
+  };
+  county.societies.push(society);
+  console.log('accumulator:', accumulator);
+  return accumulator;
+}
+
+function transformAll(data) {
+  const county = data.reduce(reducerAll, {});
+  console.log('all data:', JSON.stringify(county));
+  return county;
+}
+
+router.get("/counties_with_societies", async (req, res) => {
+  try {
+    const result = await pool
+      .query(`select c.county_id, c.county_name, s.society_name, s.website, s.location, s.phone, s.email from county c left join society s on c.county_id = s.county_id;`)
+      .then((data) => transformAll(data.rows));
+    res.json(result);
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("Server error");
+  }
+});
+
 module.exports = router;
