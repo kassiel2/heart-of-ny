@@ -259,14 +259,5 @@
 "location": "320 W. Main St., Gaylord, NY 49734",
 "email": null,
 "phone": null
-},
-{
-"society_id": 30,
-"society_name": "Broome test Society",
-"county_id": 4,
-"website": "https://www.testbroom.org",
-"location": "123 test st, Vestal, NY 13850",
-"email": null,
-"phone": null
 }
 ]

@@ -69,7 +69,7 @@ async function main() {
       const infoName = document.getElementById("info-name");
       const infoSociety = document.getElementById("info-society");
       infoName.innerHTML = county.county_name;
-      infoSociety.innerHTML = `<a href=${society.website}>${society.society_name}</a>`;
+      infoSociety.innerHTML = `<a href=${society.website} target="_blank" rel="noopener noreferrer">${society.society_name} </a>`;
     }
 
     function hideInfo() {
